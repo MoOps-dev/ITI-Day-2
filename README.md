@@ -1,71 +1,137 @@
-# ITI Day 2: Multi-Purpose Console Utility
+# ITI Day 1 – C# Console Application
 
-Developed as part of the **ITI Intensive Code Camp 2025-2026 R2** (Full Stack .NET - Zagazig), this project is a comprehensive C# console application that demonstrates fundamental programming concepts, input validation, and algorithmic logic.
+A simple **C# console-based application** developed as part of **ITI Intensive Code Camp 2025–2026 (Round 2)** – *Full Stack .NET, Zagazig*.
+This project demonstrates fundamental **C# and .NET console programming concepts** through a menu-driven interactive application.
 
 ---
 
 ## 📌 Author
 
 **Mohamed Khaled Tawfeek**
-*Full Stack .NET Developer Student at ITI*
-
 📧 Email: [mohamed.ibraham98@gmail.com](mailto:mohamed.ibraham98@gmail.com)
-
 🎓 Program: ITI Intensive Code Camp 2025–2026 (R2)
-
 💻 Track: Full Stack .NET – Zagazig
-
-📅 Day: 2
-
----
-
-## 🚀 Features
-
-The application provides a centralized menu for eight distinct utilities:
-
-1. **Student Grade Check:** Categorizes scores into Excellent, Very Good, or Good.
-2. **Even or Odd Check:** Determines the parity of any given integer.
-3. **Prime Number Check:** Efficiently verifies if a number is prime.
-4. **Simple Calculator:** Supports Addition, Subtraction, Multiplication, Division, and Exponents.
-5. **Factorial Calculation:** Uses `BigInteger` to calculate factorials of large numbers without overflow.
-6. **Exponents Calculation:** A manual implementation of power calculations.
-7. **Decimal to Binary Converter:** Converts decimal integers to their binary string representation (supports negatives).
-8. **Character & Word Counter:** Analyzes strings to count words and non-space characters.
+📅 Day: 1
 
 ---
 
-## 🛠 Technical Highlights
+## 🧩 Project Overview
 
-* **Robust Input Validation:** Uses `RegularExpressions` (Regex) with Source Generators (`[GeneratedRegex]`) for high-performance numeric and operator validation.
-* **Large Number Support:** Utilizes `System.Numerics.BigInteger` to handle factorial results that exceed the capacity of a standard `Int64`.
-* **User Interface:** Features a clean console-based menu system with recursive error handling to ensure a smooth user experience.
-* **Flow Control:** Implements `ConsoleKeyInfo` to allow navigation and program termination via the `ESC` key.
+The application presents a menu that allows the user to perform multiple basic operations related to:
+
+* Character encoding
+* Keyboard input handling
+* Number system conversion
+* C# operators knowledge assessment
+* OOP
+
+The program runs in a loop until the user chooses to exit.
 
 ---
 
-## 📋 How to Run
+## ⚙️ Features
+
+### 1️⃣ Get ASCII / Unicode Value
+
+* Reads a single character using `Console.Read()`
+* Outputs its corresponding **Unicode (ASCII) value**
+* Demonstrates input buffering and cleanup using `Console.ReadLine()`
+
+### 2️⃣ Capture Pressed Key
+
+* Uses `Console.ReadKey(true)` to capture key input
+* Displays:
+
+  * Key index (`ConsoleKey`)
+  * Actual character pressed (`KeyChar`)
+* Demonstrates secure input handling (hidden input)
+
+### 3️⃣ Convert Binary to Decimal
+
+* Accepts a **binary number** as input
+* Converts it to decimal using:
+
+  ```csharp
+  Convert.ToInt32(value, 2)
+  ```
+
+### 4️⃣ Convert Decimal to Binary
+
+* Accepts a **decimal number** as input
+* Converts it to binary using:
+
+  ```csharp
+  Convert.ToString(value, 2)
+  ```
+
+### 5️⃣ C# Operators Quiz
+
+* Interactive quiz covering common **C# operators**:
+
+  * Arithmetic
+  * Relational
+  * Logical
+  * Unary
+* Uses a `Dictionary<string, string>` for question–answer mapping
+* Randomizes questions using `Random.Shared.Shuffle()`
+* Provides immediate feedback for each answer
+
+---
+
+## 🖥️ How to Run
 
 ### Prerequisites
 
-* [.NET 8.0 SDK](https://dotnet.microsoft.com/download) or later.
+* .NET SDK 7.0 or later
+* Any C# compatible IDE (Visual Studio / VS Code)
 
-### Installation & Execution
+### Steps
 
-1. Clone the repository or copy the source code.
-2. Open your terminal in the project directory.
-3. Run the following command:
 ```bash
-dotnet run
+# Clone the repository
+git clone https://github.com/MoOps-dev/ITI-Day-1
 
+# Navigate to project directory
+cd ITI_Day_1
+
+# Run the application
+dotnet run
 ```
 
+---
 
+## 📚 Concepts Demonstrated
 
-### Navigation
+* Console input/output handling
+* Menu-driven program structure
+* Loop control using boolean flags
+* Method decomposition
+* Dictionaries and collections
+* Randomization
+* Conditional (ternary) operators
+* Base number system conversions
 
-* Use numeric keys **1-8** to select a feature.
-* Press **ESC** while inside a feature to return to the Main Menu.
-* Press **ESC** on the Main Menu to exit the application.
+---
+
+## 🧪 Sample Menu
+
+```
+1. Get ASCII/UNICODE Value
+2. Capture Pressed Key
+3. Convert a Decimal into Binary
+4. Convert a Binary into Decimal
+5. C# Operators Quiz
+Any other key to exit
+```
+
+---
+
+## 🚀 Future Improvements
+
+* Input validation and exception handling
+* Score tracking for quiz
+* Modular separation into multiple files
+* Unit testing
 
 ---
 
